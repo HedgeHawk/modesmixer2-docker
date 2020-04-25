@@ -1,20 +1,20 @@
 #!/bin/bash
 
 CUSTOM_OPTIONS=""
-if [ -n "${INPUT}" ]; then
-  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --inConnect ${INPUT}"
+if [ -n "${MM2_INPUT}" ]; then
+  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --inConnect ${MM2_INPUT}"
 fi
 
-if [ -n "${OUTPUT}" ]; then
-  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --outConnect ${OUTPUT}"
+if [ -n "${MM2_OUTPUT}" ]; then
+  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --outConnect ${MM2_OUTPUT}"
 fi
 
 if [ -n "${RECEIVER_LATITUDE}" ] && [ -n "${RECEIVER_LONGITUDE}" ]; then
   CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --location ${RECEIVER_LATITUDE}:${RECEIVER_LONGITUDE}"
 fi
 
-if [ -n "${WEBPORT}" ]; then
-  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --web ${WEBPORT}"
+if [ -n "${MM2_WEBPORT}" ]; then
+  CUSTOM_OPTIONS="${CUSTOM_OPTIONS} --web ${MM2_WEBPORT}"
 fi
 
 if [ -n "${MAPS_API_KEY}" ]; then
